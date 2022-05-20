@@ -34,6 +34,42 @@ This project is compatible with Expo/CRNA (without ejecting), and the examples h
 $ npm install --save react-native-calendars
 ```
 
+
+# Demo
+```javascript
+
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
+import { Calendar } from 'react-native-calendars';
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Text></Text>
+      <Calendar
+          markingType={'custom'}
+          markedDates={{
+            '2022-05-28': {customStyles: { container: { backgroundColor: 'black', elevation: 2}, text: {color: 'white'}}},
+            '2022-05-29': {customStyles: { container: { backgroundColor: 'black', elevation: 2}, text: {color: 'white'}}},
+            }}
+        />
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
+
+```
+
+
 The solution is implemented in JavaScript so no native module linking is required.
 
 ## Usage
@@ -595,37 +631,4 @@ An advanced `Agenda` component that can display interactive listings for calenda
   // Agenda container style
   style={{}}
 />
-```
-# DEMO
-```javascript
-
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { Calendar } from 'react-native-calendars';
-
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text></Text>
-      <Calendar
-          markingType={'custom'}
-          markedDates={{
-            '2022-05-28': {customStyles: { container: { backgroundColor: 'black', elevation: 2}, text: {color: 'white'}}},
-            '2022-05-29': {customStyles: { container: { backgroundColor: 'black', elevation: 2}, text: {color: 'white'}}},
-            }}
-        />
-      <StatusBar style="auto" />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
-
 ```
