@@ -31,7 +31,7 @@ This project is compatible with Expo/CRNA (without ejecting), and the examples h
 ## Installation
 
 ```
-$ npm install --save react-native-calendars
+ npm install --save react-native-calendars
 ```
 
 
